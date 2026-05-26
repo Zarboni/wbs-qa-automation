@@ -13,11 +13,15 @@ The framework focuses on:
 - positive and negative test scenarios
 - maintainable and readable test structure
 
+---
+
 ## Tech Stack
 
 - Playwright
 - TypeScript
 - Node.js
+
+---
 
 ## Project Structure
 
@@ -27,6 +31,7 @@ tests/
 ├── ui/
 │   ├── admin/
 │   └── guest/
+
 UI Coverage
 Guest
 Homepage smoke/content validation
@@ -70,10 +75,24 @@ Open the Playwright HTML report:
 npx playwright show-report
 Notes
 
-During exploratory tsting I found the UI booking flow to be inconsistent and unreliable for automation. CLicking a date doesnt indicate its slected and found have to drag accross wanted days to become selectable, Because of this, I intentionally avoided over-automating unstable flows and focused instead on more reliable and maintainable coverage areas.
+During exploratory testing I found the UI booking flow to be inconsistent and unreliable for automation.
+
+Clicking a date does not clearly indicate that it has been selected, and I found I had to drag across dates in order for ranges to become selectable consistently. Because of this, I intentionally avoided over-automating unstable booking flows and instead focused on more reliable and maintainable coverage areas.
 
 A GitHub Actions workflow was also added under:
 
 .github/workflows/playwright.yml
 
-for automated CI execution on push/pull request events.
+for automated CI execution on push and pull request events.
+
+---
+
+## Screenshots
+
+### Local Playwright Execution
+
+![Local Playwright Run](docs/screenshots/local-playwright-run.png)
+
+### GitHub Actions Workflow
+
+![GitHub Actions Workflow](docs/screenshots/github-actions-workflow.png)
